@@ -22,10 +22,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// NOTE: menggunakan 
 app.use(responseMiddleware);
 // NOTE: routes
 app.use("/api", routes);
-// 404 Handler
+// NOTE: 404 Handler
 app.use((req, res) => {
   return res.sendError("Route tidak ditemukan", "NOT_FOUND", 404);
 });

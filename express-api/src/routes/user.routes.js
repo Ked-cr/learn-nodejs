@@ -1,4 +1,4 @@
-// src/routes/user.routes.js
+// NOTE: user Route
 import express from "express";
 import { getUsers, getUserById } from "../controllers/user.controller.js";
 

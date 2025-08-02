@@ -1,10 +1,11 @@
-// src/controllers/user.controller.js
 
+// NOTE: Dummy data
 const users = [
   { id: 1, name: "Eko Ramadani", email: "eko@example.com" },
   { id: 2, name: "Ked", email: "ked@example.com" },
 ];
 
+// NOTE: handler GET usersList
 export const getUsers = async (req, res) => {
   const { page = 1, limit = 10 } = req.query;
 
@@ -21,6 +22,7 @@ export const getUsers = async (req, res) => {
   });
 };
 
+// NOTE: Handle get User
 export const getUserById = async (req, res) => {
   const user = users.find((u) => u.id === parseInt(req.params.id));
 

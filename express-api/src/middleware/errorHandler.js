@@ -1,3 +1,4 @@
+// NOTE: Response global error server Error 5000
 export const errorHandler = (err, req, res, next) => {
   // Log error untuk debugging server
   console.error(err);

@@ -1,8 +1,8 @@
-// src/controllers/auth.controller.js
+// NOTE:handler login
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
-  // Validasi input sederhana
+  // NOTE: validasi Input
   if (!email || !password) {
     return res.sendError(
       "Email dan password wajib diisi",
@@ -11,7 +11,7 @@ export const login = async (req, res) => {
     );
   }
 
-  // Contoh login sederhana
+  // NOTE: Contoh login sederhana
   if (email === "eko@example.com" && password === "123456") {
     return res.sendResponse({ token: "fake-jwt-token" }, "Login berhasil");
   }
@@ -19,6 +19,7 @@ export const login = async (req, res) => {
   return res.sendError("Email atau password salah", "INVALID_CREDENTIALS", 401);
 };
 
+// NOTE: handler Register
 export const register = async (req, res) => {
   const { name, email } = req.body;
 
@@ -26,7 +27,7 @@ export const register = async (req, res) => {
     return res.sendError("Nama dan email wajib diisi", "VALIDATION_ERROR", 400);
   }
 
-  // Misalnya nanti ada pengecekan ke database
+  // NOTE: Dummy Misalnya nanti ada pengecekan ke database
   const newUser = {
     id: 3,
     name,

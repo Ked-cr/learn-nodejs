@@ -1,4 +1,4 @@
-// src/routes/index.js
+// NOTE: route
 import express from "express";
 import userRoutes from "./user.routes.js";
 import authRoutes from "./auth.routes.js";

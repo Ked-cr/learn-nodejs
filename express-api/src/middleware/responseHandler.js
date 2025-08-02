@@ -1,4 +1,4 @@
-// src/middlewares/responseMiddleware.js
+// NOTE: format response sukses menjalankan controller api
 export const responseMiddleware = (req, res, next) => {
   res.sendResponse = (data, message = "Success") => {
     return res.status(200).json({
